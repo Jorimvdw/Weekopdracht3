@@ -17,8 +17,8 @@ public abstract class RisicoRijkeAttractie extends Attractie {
 			System.out.println("De attractie " + naam + " draait.");
 			omzet += prijs;
 			verkochteKaartjes++;
-			Kassa.totaleOmzet += prijs;
-			Kassa.totaalVerkochteKaartjes++;
+		//	Kassa.totaleOmzet += prijs;
+		//	Kassa.totaalVerkochteKaartjes++;
 			if (verkochteKaartjes % draaiLimiet == 0) {
 				opstellingsKeuring();
 			}

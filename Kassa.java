@@ -1,15 +1,22 @@
 package Kermis;
 
 public class Kassa {
-	static double totaleOmzet;
-	static int totaalVerkochteKaartjes;
+	static int aantalBezoekenBelastingInspecteur;
 	
-	public static void toonTotaleOmzet() {
-		System.out.println("De totale omzet is: " + totaleOmzet);
+	public static double toonTotaleOmzet() {
+		double totaleOmzet = 0.00;
+		for (int a = 0 ; a < Kermis.attracties.length ; a++) {
+			totaleOmzet += Kermis.attracties[a].omzet;
+		}
+		return totaleOmzet;		
 	}
 	
-	public static void toonTotaalVerkochteKaartjes() {
-		System.out.println("Het totaal verkochte kaartjes is: " + totaalVerkochteKaartjes);
+	public static int toonTotaalVerkochteKaartjes() {
+		int totaalVerkochteKaartjes = 0;
+		for (int a = 0 ; a < Kermis.attracties.length ; a++) {
+			totaalVerkochteKaartjes += Kermis.attracties[a].verkochteKaartjes;
+		}
+		return totaalVerkochteKaartjes;
 	}
 	
 }

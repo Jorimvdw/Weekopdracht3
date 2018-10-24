@@ -2,6 +2,8 @@ package Kermis;
 
 interface GokAttractie {
 	
-	void KansSpelBelastingReserveren();
+	default void KansSpelBelastingReserveren(Attractie attractie) {
+		attractie.gereserveerdeOmzet = attractie.omzet * 0.3;
+	}	
 }
 
