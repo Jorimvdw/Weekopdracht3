@@ -14,8 +14,8 @@ public abstract class Attractie {
 		this.prijs = prijs;
 	}
 
-	public void draaien(Attractie attractie) {
-		System.out.println("De attractie " + naam + " draait.");
+	public void draaien(Attractie attractie) throws MoetGekeurdWorden {
+		System.out.println("De attractie " + naam + " draait.\n");
 		omzet += prijs;
 		verkochteKaartjes++;
 		if (attractie instanceof GokAttractie) {
